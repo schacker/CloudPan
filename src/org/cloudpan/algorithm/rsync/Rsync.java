@@ -30,7 +30,7 @@ public class Rsync {
 		File file = new File(fileName);
 
 		RandomAccessFile src = new RandomAccessFile(fileName,"r");//原始文件
-		RandomAccessFile dst = new RandomAccessFile("temp_"+file.getName(),"rw");//打补丁之后的文件
+		RandomAccessFile dst = new RandomAccessFile("temp_"+file.getName(), "rw");//打补丁之后的文件
 		for(PatchPart part : patch.getPatchParts()){
 			if(part instanceof PatchPartData){
 				PatchPartData patchPartData =(PatchPartData)part;
